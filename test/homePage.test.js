@@ -27,12 +27,12 @@ process.on('unhandledRejection', () => {});
             it ('find the input box and google search button', async () => {
                 const result = await page.findInputAndButton();
                 expect(result.inputEnabled).to.equal(true);
-                expect(result.buttonText).to.include('Google');
+                expect(result.buttonText).to.include('Поиск в Google');
             });
 
             it ('put keyword in search box and click search button', async () => {
                 const result = await page.submitKeywordAndGetResult();
-                expect(result.length).to.be.above(10);
+                expect(result.length).to.be.above(5);
             });
         });
     } catch (ex) {
