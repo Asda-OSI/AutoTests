@@ -17,7 +17,7 @@ describe('auth', function() {
   it('auth', async function() {
     console.log(driver.prototype)
     await driver.get("https://dev.incognitohr.com/en")
-    await driver.manage().window().setRect(100, 100)
+    await driver.manage().window().setRect({ width: 1920, height: 1080})
     await driver.findElement(By.linkText("Sign in")).click()
     await driver.findElement(By.id("loginform-identity")).click()
     await driver.findElement(By.id("loginform-identity")).sendKeys("artu@osi.in.ua")
