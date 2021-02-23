@@ -1,140 +1,181 @@
 {
   "stats": {
-    "suites": 1,
-    "tests": 1,
-    "passes": 1,
+    "suites": 2,
+    "tests": 2,
+    "passes": 2,
     "pending": 0,
     "failures": 0,
-    "start": "2021-02-22T20:06:25.566Z",
-    "end": "2021-02-22T20:06:38.758Z",
-    "duration": 13192,
-    "testsRegistered": 1,
+    "start": "2021-02-23T17:16:28.848Z",
+    "end": "2021-02-23T17:16:43.251Z",
+    "duration": 14403,
+    "testsRegistered": 2,
     "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
     "skipped": 0,
-    "hasSkipped": false
+    "hasSkipped": false,
+    "passPercentClass": "success",
+    "pendingPercentClass": "danger"
   },
-  "results": [
-    {
-      "uuid": "3d3e0294-0f21-4c6c-a8dd-c5ff3798c611",
-      "title": "",
-      "fullFile": "",
-      "file": "",
-      "beforeHooks": [],
-      "afterHooks": [],
-      "tests": [],
-      "suites": [
-        {
-          "uuid": "0e253c20-7be5-4f8b-b826-55e55d9c3e5b",
-          "title": "auth",
-          "fullFile": "C:\\Users\\vppas\\Desktop\\AutoTests\\Automation-With-Selenium-And-Node.js\\test\\auth.spec.js",
-          "file": "\\test\\auth.spec.js",
-          "beforeHooks": [
-            {
-              "title": "\"before each\" hook in \"auth\"",
-              "fullTitle": "auth \"before each\" hook in \"auth\"",
-              "timedOut": false,
-              "duration": 1194,
-              "state": null,
-              "speed": null,
-              "pass": false,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "driver = await new Builder().forBrowser('chrome').build()\nvars = {}",
-              "err": {},
-              "uuid": "7b91ae2e-74be-4b9e-86d7-f44022d8db0e",
-              "parentUUID": "0e253c20-7be5-4f8b-b826-55e55d9c3e5b",
-              "isHook": true,
-              "skipped": false
-            }
-          ],
-          "afterHooks": [
-            {
-              "title": "\"after each\" hook in \"auth\"",
-              "fullTitle": "auth \"after each\" hook in \"auth\"",
-              "timedOut": false,
-              "duration": 207,
-              "state": null,
-              "speed": null,
-              "pass": false,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "await driver.quit();",
-              "err": {},
-              "uuid": "624d476b-4bfe-4bd4-a41b-06761917a401",
-              "parentUUID": "0e253c20-7be5-4f8b-b826-55e55d9c3e5b",
-              "isHook": true,
-              "skipped": false
-            }
-          ],
-          "tests": [
-            {
-              "title": "auth",
-              "fullTitle": "auth auth",
-              "timedOut": false,
-              "duration": 11754,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
-              "pending": false,
-              "context": null,
-              "code": "console.log(driver.prototype)\nawait driver.get(\"https://dev.incognitohr.com/en\")\nawait driver.manage().window().setRect({ width: 1920, height: 1080})\nawait driver.findElement(By.linkText(\"Sign in\")).click()\nawait driver.findElement(By.id(\"loginform-identity\")).click()\nawait driver.findElement(By.id(\"loginform-identity\")).sendKeys(\"artu@osi.in.ua\")\nawait driver.findElement(By.id(\"loginform-password\")).click()\nawait driver.findElement(By.id(\"loginform-password\")).sendKeys(\"1111111\")\nawait driver.findElement(By.name(\"login-button\")).click()\n{\n  const elements = await driver.findElements(By.css(\".alert\"))\n  assert(elements.length)\n}",
-              "err": {},
-              "uuid": "b0ae06cb-9501-4759-8603-c8a9ae07ba96",
-              "parentUUID": "0e253c20-7be5-4f8b-b826-55e55d9c3e5b",
-              "isHook": false,
-              "skipped": false
-            }
-          ],
-          "suites": [],
-          "passes": [
-            "b0ae06cb-9501-4759-8603-c8a9ae07ba96"
-          ],
-          "failures": [],
-          "pending": [],
-          "skipped": [],
-          "duration": 11754,
-          "root": false,
-          "rootEmpty": false,
-          "_timeout": 30000
-        }
-      ],
-      "passes": [],
-      "failures": [],
-      "pending": [],
-      "skipped": [],
-      "duration": 0,
-      "root": true,
-      "rootEmpty": true,
-      "_timeout": 2000
-    }
-  ],
-  "meta": {
-    "mocha": {
-      "version": "8.3.0"
-    },
-    "mochawesome": {
-      "options": {
-        "quiet": false,
-        "reportFilename": "mochawesome",
-        "saveHtml": true,
-        "saveJson": true,
-        "consoleReporter": "spec",
-        "useInlineDiffs": false,
-        "code": true
+  "suites": {
+    "uuid": "0bac07e8-ba81-40b9-9aec-27dc0f47a273",
+    "title": "",
+    "fullFile": "",
+    "file": "",
+    "beforeHooks": [],
+    "afterHooks": [],
+    "tests": [],
+    "suites": [
+      {
+        "uuid": "81f4ad58-6842-43b6-b301-cd78269a6f80",
+        "title": "auth",
+        "fullFile": "/Users/artur/Desktop/Autot/AutoTests/test/auth.spec.js",
+        "file": "/test/auth.spec.js",
+        "beforeHooks": [
+          {
+            "title": "\"before each\" hook",
+            "fullTitle": "auth \"before each\" hook",
+            "timedOut": false,
+            "duration": 1193,
+            "pass": false,
+            "fail": false,
+            "pending": false,
+            "code": "driver = await new Builder().forBrowser('chrome').build()\nvars = {}",
+            "err": {},
+            "isRoot": false,
+            "uuid": "bde2581f-15ac-4233-bd90-5ba0830f7048",
+            "isHook": true,
+            "skipped": false
+          }
+        ],
+        "afterHooks": [
+          {
+            "title": "\"after each\" hook",
+            "fullTitle": "auth \"after each\" hook",
+            "timedOut": false,
+            "duration": 60,
+            "pass": false,
+            "fail": false,
+            "pending": false,
+            "code": "await driver.quit();",
+            "err": {},
+            "isRoot": false,
+            "uuid": "4b30c7f9-afe9-4286-b4d0-0da8b8bd52d2",
+            "isHook": true,
+            "skipped": false
+          }
+        ],
+        "tests": [
+          {
+            "title": "auth",
+            "fullTitle": "auth auth",
+            "timedOut": false,
+            "duration": 3753,
+            "state": "passed",
+            "speed": "slow",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "console.log(driver.prototype)\nawait driver.get(\"https://dev.incognitohr.com/en\")\nawait driver.manage().window().setRect({ width: 1920, height: 1080})\nawait driver.findElement(By.linkText(\"Sign in\")).click()\nawait driver.findElement(By.id(\"loginform-identity\")).click()\nawait driver.findElement(By.id(\"loginform-identity\")).sendKeys(\"artu@osi.in.ua\")\nawait driver.findElement(By.id(\"loginform-password\")).click()\nawait driver.findElement(By.id(\"loginform-password\")).sendKeys(\"1111111\")\nawait driver.findElement(By.name(\"login-button\")).click()\n{\n  const elements = await driver.findElements(By.css(\".alert\"))\n  assert(elements.length)\n}",
+            "err": {},
+            "isRoot": false,
+            "uuid": "6aa9634c-f5ab-4c65-ba78-131c05b23651",
+            "isHook": false,
+            "skipped": false
+          }
+        ],
+        "suites": [],
+        "passes": [
+          "6aa9634c-f5ab-4c65-ba78-131c05b23651"
+        ],
+        "failures": [],
+        "pending": [],
+        "skipped": [],
+        "duration": 3753,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 30000
       },
-      "version": "6.2.2"
-    },
-    "marge": {
-      "options": {
-        "autoOpen": "true"
-      },
-      "version": "5.2.0"
-    }
-  }
+      {
+        "uuid": "072d2314-da9d-4f8e-8850-7f4b9b9d550d",
+        "title": "sign in",
+        "fullFile": "/Users/artur/Desktop/Autot/AutoTests/test/signin.spec.js",
+        "file": "/test/signin.spec.js",
+        "beforeHooks": [
+          {
+            "title": "\"before each\" hook",
+            "fullTitle": "sign in \"before each\" hook",
+            "timedOut": false,
+            "duration": 1088,
+            "pass": false,
+            "fail": false,
+            "pending": false,
+            "code": "driver = await new Builder().forBrowser('chrome').build()\nvars = {}",
+            "err": {},
+            "isRoot": false,
+            "uuid": "5aa8c5b1-cf1e-40dc-8514-268279cf335a",
+            "isHook": true,
+            "skipped": false
+          }
+        ],
+        "afterHooks": [
+          {
+            "title": "\"after each\" hook",
+            "fullTitle": "sign in \"after each\" hook",
+            "timedOut": false,
+            "duration": 52,
+            "pass": false,
+            "fail": false,
+            "pending": false,
+            "code": "await driver.quit();",
+            "err": {},
+            "isRoot": false,
+            "uuid": "5f7714b6-83a7-4d18-87e1-99ac9575381a",
+            "isHook": true,
+            "skipped": false
+          }
+        ],
+        "tests": [
+          {
+            "title": "sign in",
+            "fullTitle": "sign in sign in",
+            "timedOut": false,
+            "duration": 8249,
+            "state": "passed",
+            "speed": "slow",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "await driver.get(\"https://dev.incognitohr.com/en\")\nawait driver.manage().window().setRect({ width: 1920, height: 1080})\nawait driver.findElement(By.linkText(\"Sign in\")).click()\nawait driver.findElement(By.id(\"loginform-identity\")).click()\nawait driver.findElement(By.id(\"loginform-identity\")).sendKeys(\"artur@osi.in.ua\")\nawait driver.findElement(By.id(\"loginform-password\")).click()\nawait driver.findElement(By.id(\"loginform-password\")).sendKeys(Key.SPACE, Key.SPACE, Key.SPACE, Key.SPACE, Key.SPACE, '1')\nawait driver.findElement(By.name(\"login-button\")).click()\n// await driver.sleep(2000)\nawait driver.wait(until.elementLocated(By.xpath('/html/body/div[1]/header/nav/div/div[2]/a')), 5000);\nawait driver.findElement(By.xpath('/html/body/div[1]/header/nav/div/div[2]/a')).click()\nawait driver.wait(until.elementLocated(By.xpath('/html/body/main/section/div/div[2]/div[1]/div/div[2]/ul/li[7]')), 5000);\nawait driver.findElement(By.xpath('/html/body/main/section/div/div[2]/div[1]/div/div[2]/ul/li[7]')).click()\n{\n  const elements = await driver.findElements(By.xpath('//*[@id=\"navbarSupportedContent\"]/div[1]/a[1]'))\n  assert(elements.length)\n}\n// await driver.sleep(2000)",
+            "err": {},
+            "isRoot": false,
+            "uuid": "e7193e28-a72c-4982-9a18-45ffcbbd5815",
+            "isHook": false,
+            "skipped": false
+          }
+        ],
+        "suites": [],
+        "passes": [
+          "e7193e28-a72c-4982-9a18-45ffcbbd5815"
+        ],
+        "failures": [],
+        "pending": [],
+        "skipped": [],
+        "duration": 8249,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 30000
+      }
+    ],
+    "passes": [],
+    "failures": [],
+    "pending": [],
+    "skipped": [],
+    "duration": 0,
+    "root": true,
+    "rootEmpty": true,
+    "_timeout": 2000
+  },
+  "copyrightYear": 2021
 }
