@@ -26,6 +26,7 @@
     "selenium-webdriver": "^4.0.0-alpha.1"
   },
   "dependencies": {
+    "@types/selenium-webdriver": "^4.0.11",
     "dotenv": "^8.2.0",
     "esm": "^3.2.25",
     "mocha-snapshots": "^4.2.0"
