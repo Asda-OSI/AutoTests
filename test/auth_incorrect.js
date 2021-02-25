@@ -24,6 +24,8 @@ describe('auth', function() {
     await driver.findElement(By.id("loginform-password")).click()
     await driver.findElement(By.id("loginform-password")).sendKeys("1111111")
     await driver.findElement(By.name("login-button")).click()
+    // await driver.sleep(15000)
+
     {
       const elements = await driver.findElements(By.css(".alert"))
       assert(elements.length)

@@ -105,6 +105,24 @@ describe('Job_creating', function() {
       const elements = await driver.findElements(By.css(".block-details"))
       assert(elements.length)
     }
+
+    await driver.findElement(By.linkText("Account")).click()
+    await driver.findElement(By.linkText("My Jobs")).click()
+    await driver.findElement(By.css("#w0 > li:nth-child(1) > a")).click()
+
+    // await driver.sleep(15000)
+    {
+      const elements = await driver.findElements(By.linkText("Auto_Test_Job_Creation"))
+      assert(elements.length)
+    }
+
+    // await driver.sleep(15000)
+
+    {
+      const elements = await driver.findElements(By.xpath("//p[contains(.,\'​Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, error voluptates tempore veritatis voluptatibus minima qui ipsa doloribus laboriosam obcaecati corporis officiis magni, eius temporibus incidunt quisquam labore, sunt recusandae.\')]"))
+      assert(elements.length)
+    }
+
     await driver.findElement(By.linkText("Logout")).click()
   })
 })
