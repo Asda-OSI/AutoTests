@@ -19,11 +19,11 @@
   "devDependencies": {
     "chai": "^4.1.2",
     "chai-as-promised": "^7.1.1",
-    "chromedriver": "^2.41.0",
+    "chromedriver": "^2.46.0",
     "faker": "^4.1.0",
     "mocha": "^8.3.0",
     "mochawesome": "^6.2.2",
-    "selenium-webdriver": "^4.0.0-alpha.1"
+    "selenium-webdriver": "^4.0.0-beta.1"
   },
   "dependencies": {
     "@types/selenium-webdriver": "^4.0.11",

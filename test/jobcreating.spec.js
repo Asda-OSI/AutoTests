@@ -16,7 +16,7 @@ describe('Job_creating', function() {
   })
   it('Job_creating', async function() {
     await driver.get("https://dev.incognitohr.com/en")
-    await driver.manage().window().setRect({ width: 1920, height: 1080}).ImplicitWait
+    await driver.manage().window().setRect({width: 1920, height: 1080})
     await driver.findElement(By.linkText("Sign in")).click()
     await driver.findElement(By.id("loginform-identity")).click()
     await driver.findElement(By.id("loginform-identity")).sendKeys("artur@osi.in.ua")
@@ -61,14 +61,14 @@ describe('Job_creating', function() {
       await dropdown.findElement(By.xpath("//option[. = 'Bobrowice']")).click()
     }
     await driver.findElement(By.css(".re-html")).click()
+    await driver.executeScript(`document.querySelector(".field-job-description").scrollIntoView()`);
     await driver.findElement(By.id("w5")).click()
     await driver.findElement(By.id("w5")).sendKeys("​Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, error voluptates tempore veritatis voluptatibus minima qui ipsa doloribus laboriosam obcaecati corporis officiis magni, eius temporibus incidunt quisquam labore, sunt recusandae.")
 
-    await driver.sleep(5000)
+    
+    // await driver.sleep(5000)
     await driver.findElement(By.xpath('/html/body/main/section/div/div[2]/div[2]/div/form/div/div/div[11]/div/span/span[1]/span/ul/li/input')).click()
     await driver.findElement(By.xpath('/html/body/main/section/div/div[2]/div[2]/div/form/div/div/div[11]/div/span/span[1]/span/ul/li/input')).sendKeys(`Test${Key.SPACE}`)
-    // await driver.wait(until.elementLocated(By.xpath("/html/body/span[13]/span/span/ul/li[1]")), 5000)
-    // await driver.findElement(By.xpath("/html/body/span[13]/span/span/ul/li[1]")).click();
     // await driver.sleep(5000)
     await driver.findElement(By.xpath('/html/body/main/section/div/div[2]/div[2]/div/form/div/div/div[11]/div/span/span[1]/span/ul/li/input')).sendKeys(`Automation${Key.SPACE}`)
     // await driver.sleep(5000)
@@ -78,13 +78,13 @@ describe('Job_creating', function() {
       const dropdown = await driver.findElement(By.id("job-meta_english_level"))
       await dropdown.findElement(By.xpath("//option[. = 'Advanced C1-C2']")).click()
     }
-
-
-    await driver.sleep(10000)
-
+    
+    // await driver.sleep(10000)
+    
     await driver.findElement(By.css("#job-meta_job_type > .custom-control:nth-child(1) > .custom-control-label")).click()
-
-    await driver.sleep(5000)
+    
+    // await driver.sleep(5000)
+    await driver.executeScript(`document.querySelector(".field-job-meta_contract_type").scrollIntoView()`);
 
     await driver.findElement(By.xpath('//*[@id="job-meta_contract_type"]/div[2]/label')).click()
     await driver.findElement(By.id("job-meta_experience_from")).click()

@@ -2,14 +2,14 @@
   "stats": {
     "suites": 3,
     "tests": 3,
-    "passes": 2,
+    "passes": 3,
     "pending": 0,
-    "failures": 1,
-    "start": "2021-02-24T15:31:43.632Z",
-    "end": "2021-02-24T15:32:14.991Z",
-    "duration": 31359,
+    "failures": 0,
+    "start": "2021-02-25T12:52:21.685Z",
+    "end": "2021-02-25T12:52:54.198Z",
+    "duration": 32513,
     "testsRegistered": 3,
-    "passPercent": 66.66666666666666,
+    "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "21f270b3-c0f8-4854-a534-ed9ae7cf50fa",
+      "uuid": "c48be1ef-f9fb-4cf3-b49f-cb41ceb08db3",
       "title": "",
       "fullFile": "",
       "file": "",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "15a6c86e-1053-4d7a-b1b5-a2bfaf623c62",
+          "uuid": "c037fe0c-70cb-4a30-865b-bde0b6ec8d68",
           "title": "auth",
           "fullFile": "/Users/artur/Desktop/Autot/AutoTests/test/auth.spec.js",
           "file": "/test/auth.spec.js",
@@ -36,7 +36,7 @@
               "title": "\"before each\" hook in \"auth\"",
               "fullTitle": "auth \"before each\" hook in \"auth\"",
               "timedOut": false,
-              "duration": 1102,
+              "duration": 1131,
               "state": null,
               "speed": null,
               "pass": false,
@@ -45,8 +45,8 @@
               "context": null,
               "code": "driver = await new Builder().forBrowser('chrome').build()\nvars = {}",
               "err": {},
-              "uuid": "5911b547-e214-485a-9700-d5ded4ca22ef",
-              "parentUUID": "15a6c86e-1053-4d7a-b1b5-a2bfaf623c62",
+              "uuid": "a9e6831f-165c-4c71-9c54-2985714962e2",
+              "parentUUID": "c037fe0c-70cb-4a30-865b-bde0b6ec8d68",
               "isHook": true,
               "skipped": false
             }
@@ -56,7 +56,7 @@
               "title": "\"after each\" hook in \"auth\"",
               "fullTitle": "auth \"after each\" hook in \"auth\"",
               "timedOut": false,
-              "duration": 55,
+              "duration": 53,
               "state": null,
               "speed": null,
               "pass": false,
@@ -65,8 +65,8 @@
               "context": null,
               "code": "await driver.quit();",
               "err": {},
-              "uuid": "2392774b-599c-46f9-a7f9-c072eea390e6",
-              "parentUUID": "15a6c86e-1053-4d7a-b1b5-a2bfaf623c62",
+              "uuid": "5ba0431d-7291-46fd-a541-d2cb5ca707d7",
+              "parentUUID": "c037fe0c-70cb-4a30-865b-bde0b6ec8d68",
               "isHook": true,
               "skipped": false
             }
@@ -76,7 +76,7 @@
               "title": "auth",
               "fullTitle": "auth auth",
               "timedOut": false,
-              "duration": 3959,
+              "duration": 4059,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -85,26 +85,26 @@
               "context": null,
               "code": "console.log(driver.prototype)\nawait driver.get(\"https://dev.incognitohr.com/en\")\nawait driver.manage().window().setRect({ width: 1920, height: 1080})\nawait driver.findElement(By.linkText(\"Sign in\")).click()\nawait driver.findElement(By.id(\"loginform-identity\")).click()\nawait driver.findElement(By.id(\"loginform-identity\")).sendKeys(\"artu@osi.in.ua\")\nawait driver.findElement(By.id(\"loginform-password\")).click()\nawait driver.findElement(By.id(\"loginform-password\")).sendKeys(\"1111111\")\nawait driver.findElement(By.name(\"login-button\")).click()\n{\n  const elements = await driver.findElements(By.css(\".alert\"))\n  assert(elements.length)\n}",
               "err": {},
-              "uuid": "71f9c68f-ba0b-4fda-91ff-fd4d46f88950",
-              "parentUUID": "15a6c86e-1053-4d7a-b1b5-a2bfaf623c62",
+              "uuid": "517a93dc-5e43-4190-9cac-c58b523ebc09",
+              "parentUUID": "c037fe0c-70cb-4a30-865b-bde0b6ec8d68",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "71f9c68f-ba0b-4fda-91ff-fd4d46f88950"
+            "517a93dc-5e43-4190-9cac-c58b523ebc09"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 3959,
+          "duration": 4059,
           "root": false,
           "rootEmpty": false,
           "_timeout": 30000
         },
         {
-          "uuid": "81df6174-c7b9-4c14-8972-e3f0cf4c80c7",
+          "uuid": "29434041-88bb-4709-93e9-66e3278c8c4c",
           "title": "Job_creating",
           "fullFile": "/Users/artur/Desktop/Autot/AutoTests/test/jobcreating.spec.js",
           "file": "/test/jobcreating.spec.js",
@@ -113,7 +113,7 @@
               "title": "\"before each\" hook in \"Job_creating\"",
               "fullTitle": "Job_creating \"before each\" hook in \"Job_creating\"",
               "timedOut": false,
-              "duration": 1150,
+              "duration": 1155,
               "state": null,
               "speed": null,
               "pass": false,
@@ -122,8 +122,8 @@
               "context": null,
               "code": "driver = await new Builder().forBrowser('chrome').build()\nvars = {}",
               "err": {},
-              "uuid": "0a99b435-dae6-40e4-b028-49b8f91cf808",
-              "parentUUID": "81df6174-c7b9-4c14-8972-e3f0cf4c80c7",
+              "uuid": "3baef620-7642-4663-8184-fa33438c9506",
+              "parentUUID": "29434041-88bb-4709-93e9-66e3278c8c4c",
               "isHook": true,
               "skipped": false
             }
@@ -142,8 +142,8 @@
               "context": null,
               "code": "await driver.quit();",
               "err": {},
-              "uuid": "28c93693-daea-4573-b576-ea30aeb2aa53",
-              "parentUUID": "81df6174-c7b9-4c14-8972-e3f0cf4c80c7",
+              "uuid": "e06304ed-3c1b-438b-9ab0-35e4bcf33525",
+              "parentUUID": "29434041-88bb-4709-93e9-66e3278c8c4c",
               "isHook": true,
               "skipped": false
             }
@@ -153,39 +153,35 @@
               "title": "Job_creating",
               "fullTitle": "Job_creating Job_creating",
               "timedOut": false,
-              "duration": 13398,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
+              "duration": 16270,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
               "pending": false,
               "context": null,
-              "code": "await driver.get(\"https://dev.incognitohr.com/en\")\nawait driver.manage().window().setRect({ width: 1920, height: 1080}).ImplicitWait\nawait driver.findElement(By.linkText(\"Sign in\")).click()\nawait driver.findElement(By.id(\"loginform-identity\")).click()\nawait driver.findElement(By.id(\"loginform-identity\")).sendKeys(\"artur@osi.in.ua\")\nawait driver.findElement(By.id(\"loginform-password\")).click()\nawait driver.findElement(By.id(\"loginform-password\")).sendKeys(Key.SPACE, Key.SPACE, Key.SPACE, Key.SPACE, Key.SPACE, '1')\nawait driver.findElement(By.name(\"login-button\")).click()\nawait driver.wait(until.elementLocated(By.linkText(\"Account\")), 5000);\nawait driver.findElement(By.linkText(\"Account\")).click()\nawait driver.findElement(By.css(\".sub-menu:nth-child(3) > span\")).click()\nawait driver.wait(until.elementLocated(By.linkText(\"Add Job\")), 5000);\nawait driver.findElement(By.linkText(\"Add Job\")).click()\nawait driver.findElement(By.id(\"job-title\")).click()\nawait driver.findElement(By.id(\"job-title\")).sendKeys(\"Auto_Test_Job_Creation\")\nawait driver.findElement(By.id(\"job-meta_category\")).click()\n{\n  const dropdown = await driver.findElement(By.id(\"job-meta_category\"))\n  await dropdown.findElement(By.xpath(\"//option[. = 'Java']\")).click()\n}\nawait driver.findElement(By.id(\"job-meta_salary\")).click()\nawait driver.findElement(By.id(\"job-meta_salary\")).sendKeys(\"1111\")\nawait driver.findElement(By.id(\"job-meta_currency\")).click()\n{\n  const dropdown = await driver.findElement(By.id(\"job-meta_currency\"))\n  await dropdown.findElement(By.xpath(\"//option[. = 'USD']\")).click()\n}\nawait driver.findElement(By.id(\"meta-country\")).click()\n{\n  const dropdown = await driver.findElement(By.id(\"meta-country\"))\n  await dropdown.findElement(By.xpath(\"//option[. = 'Poland']\")).click()\n}\nawait driver.findElement(By.id(\"meta-region\")).click()\n{\n  const dropdown = await driver.findElement(By.id(\"meta-region\"))\n  await dropdown.findElement(By.xpath(\"//option[. = 'Lubuskie']\")).click()\n}\nawait driver.findElement(By.id(\"meta-city\")).click()\n{\n  const dropdown = await driver.findElement(By.id(\"meta-city\"))\n  await dropdown.findElement(By.xpath(\"//option[. = 'Bobrowice']\")).click()\n}\nawait driver.findElement(By.css(\".re-html\")).click()\nawait driver.findElement(By.id(\"w5\")).click()\nawait driver.findElement(By.id(\"w5\")).sendKeys(\"​Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, error voluptates tempore veritatis voluptatibus minima qui ipsa doloribus laboriosam obcaecati corporis officiis magni, eius temporibus incidunt quisquam labore, sunt recusandae.\")\nawait driver.sleep(5000)\n((JavascriptExecutor), driver)\n .executeScript(\"window.scrollTo(0, document.body.scrollHeight)\");\nawait driver.findElement(By.xpath('/html/body/main/section/div/div[2]/div[2]/div/form/div/div/div[11]/div/span/span[1]/span/ul/li/input')).click()\nawait driver.findElement(By.xpath('/html/body/main/section/div/div[2]/div[2]/div/form/div/div/div[11]/div/span/span[1]/span/ul/li/input')).sendKeys(`Test${Key.SPACE}`)\n// await driver.wait(until.elementLocated(By.xpath(\"/html/body/span[13]/span/span/ul/li[1]\")), 5000)\n// await driver.findElement(By.xpath(\"/html/body/span[13]/span/span/ul/li[1]\")).click();\n// await driver.sleep(5000)\nawait driver.findElement(By.xpath('/html/body/main/section/div/div[2]/div[2]/div/form/div/div/div[11]/div/span/span[1]/span/ul/li/input')).sendKeys(`Automation${Key.SPACE}`)\n// await driver.sleep(5000)\nawait driver.findElement(By.id(\"job-meta_english_level\")).click()\n{\n  const dropdown = await driver.findElement(By.id(\"job-meta_english_level\"))\n  await dropdown.findElement(By.xpath(\"//option[. = 'Advanced C1-C2']\")).click()\n}\n\nawait driver.sleep(10000)\nawait driver.findElement(By.css(\"#job-meta_job_type > .custom-control:nth-child(1) > .custom-control-label\")).click()\nawait driver.sleep(5000)\nawait driver.findElement(By.xpath('//*[@id=\"job-meta_contract_type\"]/div[2]/label')).click()\nawait driver.findElement(By.id(\"job-meta_experience_from\")).click()\nawait driver.findElement(By.id(\"job-meta_experience_from\")).sendKeys(\"2\")\nawait driver.findElement(By.id(\"job-meta_experience_to\")).click()\nawait driver.findElement(By.id(\"job-meta_experience_to\")).sendKeys(\"6\")\nawait driver.wait(until.elementLocated(By.css(\".btn-wide\")), 5000);\nawait driver.findElement(By.xpath('//*[@id=\"w4\"]/div/div/div[16]/button')).click()\n{\n  await driver.wait(until.elementLocated(By.xpath(\"//h1[contains(.,\\'Auto_Test_Job_Creation\\')]\")), 5000);\n  const elements = await driver.findElements(By.xpath(\"//h1[contains(.,\\'Auto_Test_Job_Creation\\')]\"))\n  assert(elements.length)\n}\n{\n  await driver.wait(until.elementLocated(By.css(\".block-details\")), 5000);\n  const elements = await driver.findElements(By.css(\".block-details\"))\n  assert(elements.length)\n}\nawait driver.findElement(By.linkText(\"Logout\")).click()",
-              "err": {
-                "message": "ReferenceError: JavascriptExecutor is not defined",
-                "estack": "ReferenceError: JavascriptExecutor is not defined\n    at Context.<anonymous> (test/jobcreating.spec.js:68:7)\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)",
-                "diff": null
-              },
-              "uuid": "b3e9c6f4-58a2-4ca8-9822-7f43e63ed9b3",
-              "parentUUID": "81df6174-c7b9-4c14-8972-e3f0cf4c80c7",
+              "code": "await driver.get(\"https://dev.incognitohr.com/en\")\nawait driver.manage().window().setRect({width: 1920, height: 1080})\nawait driver.findElement(By.linkText(\"Sign in\")).click()\nawait driver.findElement(By.id(\"loginform-identity\")).click()\nawait driver.findElement(By.id(\"loginform-identity\")).sendKeys(\"artur@osi.in.ua\")\nawait driver.findElement(By.id(\"loginform-password\")).click()\nawait driver.findElement(By.id(\"loginform-password\")).sendKeys(Key.SPACE, Key.SPACE, Key.SPACE, Key.SPACE, Key.SPACE, '1')\nawait driver.findElement(By.name(\"login-button\")).click()\nawait driver.wait(until.elementLocated(By.linkText(\"Account\")), 5000);\nawait driver.findElement(By.linkText(\"Account\")).click()\nawait driver.findElement(By.css(\".sub-menu:nth-child(3) > span\")).click()\nawait driver.wait(until.elementLocated(By.linkText(\"Add Job\")), 5000);\nawait driver.findElement(By.linkText(\"Add Job\")).click()\nawait driver.findElement(By.id(\"job-title\")).click()\nawait driver.findElement(By.id(\"job-title\")).sendKeys(\"Auto_Test_Job_Creation\")\nawait driver.findElement(By.id(\"job-meta_category\")).click()\n{\n  const dropdown = await driver.findElement(By.id(\"job-meta_category\"))\n  await dropdown.findElement(By.xpath(\"//option[. = 'Java']\")).click()\n}\nawait driver.findElement(By.id(\"job-meta_salary\")).click()\nawait driver.findElement(By.id(\"job-meta_salary\")).sendKeys(\"1111\")\nawait driver.findElement(By.id(\"job-meta_currency\")).click()\n{\n  const dropdown = await driver.findElement(By.id(\"job-meta_currency\"))\n  await dropdown.findElement(By.xpath(\"//option[. = 'USD']\")).click()\n}\nawait driver.findElement(By.id(\"meta-country\")).click()\n{\n  const dropdown = await driver.findElement(By.id(\"meta-country\"))\n  await dropdown.findElement(By.xpath(\"//option[. = 'Poland']\")).click()\n}\nawait driver.findElement(By.id(\"meta-region\")).click()\n{\n  const dropdown = await driver.findElement(By.id(\"meta-region\"))\n  await dropdown.findElement(By.xpath(\"//option[. = 'Lubuskie']\")).click()\n}\nawait driver.findElement(By.id(\"meta-city\")).click()\n{\n  const dropdown = await driver.findElement(By.id(\"meta-city\"))\n  await dropdown.findElement(By.xpath(\"//option[. = 'Bobrowice']\")).click()\n}\nawait driver.findElement(By.css(\".re-html\")).click()\nawait driver.executeScript(`document.querySelector(\".field-job-description\").scrollIntoView()`);\nawait driver.findElement(By.id(\"w5\")).click()\nawait driver.findElement(By.id(\"w5\")).sendKeys(\"​Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, error voluptates tempore veritatis voluptatibus minima qui ipsa doloribus laboriosam obcaecati corporis officiis magni, eius temporibus incidunt quisquam labore, sunt recusandae.\")\n\n// await driver.sleep(5000)\nawait driver.findElement(By.xpath('/html/body/main/section/div/div[2]/div[2]/div/form/div/div/div[11]/div/span/span[1]/span/ul/li/input')).click()\nawait driver.findElement(By.xpath('/html/body/main/section/div/div[2]/div[2]/div/form/div/div/div[11]/div/span/span[1]/span/ul/li/input')).sendKeys(`Test${Key.SPACE}`)\n// await driver.wait(until.elementLocated(By.xpath(\"/html/body/span[13]/span/span/ul/li[1]\")), 5000)\n// await driver.findElement(By.xpath(\"/html/body/span[13]/span/span/ul/li[1]\")).click();\n// await driver.sleep(5000)\nawait driver.findElement(By.xpath('/html/body/main/section/div/div[2]/div[2]/div/form/div/div/div[11]/div/span/span[1]/span/ul/li/input')).sendKeys(`Automation${Key.SPACE}`)\n// await driver.sleep(5000)\nawait driver.findElement(By.id(\"job-meta_english_level\")).click()\n{\n  const dropdown = await driver.findElement(By.id(\"job-meta_english_level\"))\n  await dropdown.findElement(By.xpath(\"//option[. = 'Advanced C1-C2']\")).click()\n}\n\n\n// await driver.sleep(10000)\n\nawait driver.findElement(By.css(\"#job-meta_job_type > .custom-control:nth-child(1) > .custom-control-label\")).click()\n\n// await driver.sleep(5000)\nawait driver.executeScript(`document.querySelector(\".field-job-meta_contract_type\").scrollIntoView()`);\nawait driver.findElement(By.xpath('//*[@id=\"job-meta_contract_type\"]/div[2]/label')).click()\nawait driver.findElement(By.id(\"job-meta_experience_from\")).click()\nawait driver.findElement(By.id(\"job-meta_experience_from\")).sendKeys(\"2\")\nawait driver.findElement(By.id(\"job-meta_experience_to\")).click()\nawait driver.findElement(By.id(\"job-meta_experience_to\")).sendKeys(\"6\")\nawait driver.wait(until.elementLocated(By.css(\".btn-wide\")), 5000);\nawait driver.findElement(By.xpath('//*[@id=\"w4\"]/div/div/div[16]/button')).click()\n{\n  await driver.wait(until.elementLocated(By.xpath(\"//h1[contains(.,\\'Auto_Test_Job_Creation\\')]\")), 5000);\n  const elements = await driver.findElements(By.xpath(\"//h1[contains(.,\\'Auto_Test_Job_Creation\\')]\"))\n  assert(elements.length)\n}\n{\n  await driver.wait(until.elementLocated(By.css(\".block-details\")), 5000);\n  const elements = await driver.findElements(By.css(\".block-details\"))\n  assert(elements.length)\n}\nawait driver.findElement(By.linkText(\"Logout\")).click()",
+              "err": {},
+              "uuid": "86d8c0f2-9dfd-441a-8880-b7e0ebcddcc6",
+              "parentUUID": "29434041-88bb-4709-93e9-66e3278c8c4c",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [],
-          "failures": [
-            "b3e9c6f4-58a2-4ca8-9822-7f43e63ed9b3"
+          "passes": [
+            "86d8c0f2-9dfd-441a-8880-b7e0ebcddcc6"
           ],
+          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 13398,
+          "duration": 16270,
           "root": false,
           "rootEmpty": false,
           "_timeout": 100000
         },
         {
-          "uuid": "68fe0e92-8207-41d4-a1ba-4ebe99ce4d09",
+          "uuid": "f8ae2910-2848-49b0-9543-2e44c1ceaccb",
           "title": "sign in",
           "fullFile": "/Users/artur/Desktop/Autot/AutoTests/test/signin.spec.js",
           "file": "/test/signin.spec.js",
@@ -194,7 +190,7 @@
               "title": "\"before each\" hook in \"sign in\"",
               "fullTitle": "sign in \"before each\" hook in \"sign in\"",
               "timedOut": false,
-              "duration": 1213,
+              "duration": 1059,
               "state": null,
               "speed": null,
               "pass": false,
@@ -203,8 +199,8 @@
               "context": null,
               "code": "driver = await new Builder().forBrowser('chrome').build()\nvars = {}",
               "err": {},
-              "uuid": "2732d50f-9f3f-4700-80c5-0e63ed4dfe34",
-              "parentUUID": "68fe0e92-8207-41d4-a1ba-4ebe99ce4d09",
+              "uuid": "90447411-bd8e-4093-8c8a-a4a97d2d01db",
+              "parentUUID": "f8ae2910-2848-49b0-9543-2e44c1ceaccb",
               "isHook": true,
               "skipped": false
             }
@@ -214,7 +210,7 @@
               "title": "\"after each\" hook in \"sign in\"",
               "fullTitle": "sign in \"after each\" hook in \"sign in\"",
               "timedOut": false,
-              "duration": 52,
+              "duration": 54,
               "state": null,
               "speed": null,
               "pass": false,
@@ -223,8 +219,8 @@
               "context": null,
               "code": "await driver.quit();",
               "err": {},
-              "uuid": "e3b5945e-0c03-4a4e-a9fe-85a4234b4ba8",
-              "parentUUID": "68fe0e92-8207-41d4-a1ba-4ebe99ce4d09",
+              "uuid": "48e62663-f39e-42b0-8628-fe4c7e8c2b96",
+              "parentUUID": "f8ae2910-2848-49b0-9543-2e44c1ceaccb",
               "isHook": true,
               "skipped": false
             }
@@ -234,7 +230,7 @@
               "title": "sign in",
               "fullTitle": "sign in sign in",
               "timedOut": false,
-              "duration": 10367,
+              "duration": 8668,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -243,20 +239,20 @@
               "context": null,
               "code": "await driver.get(\"https://dev.incognitohr.com/en\")\nawait driver.manage().window().setRect({ width: 1920, height: 1080})\nawait driver.findElement(By.linkText(\"Sign in\")).click()\nawait driver.findElement(By.id(\"loginform-identity\")).click()\nawait driver.findElement(By.id(\"loginform-identity\")).sendKeys(\"artur@osi.in.ua\")\nawait driver.findElement(By.id(\"loginform-password\")).click()\nawait driver.findElement(By.id(\"loginform-password\")).sendKeys(Key.SPACE, Key.SPACE, Key.SPACE, Key.SPACE, Key.SPACE, '1')\nawait driver.findElement(By.name(\"login-button\")).click()\n// await driver.sleep(2000)\nawait driver.wait(until.elementLocated(By.xpath('/html/body/div[1]/header/nav/div/div[2]/a')), 5000);\nawait driver.findElement(By.xpath('/html/body/div[1]/header/nav/div/div[2]/a')).click()\nawait driver.wait(until.elementLocated(By.xpath('/html/body/main/section/div/div[2]/div[1]/div/div[2]/ul/li[7]')), 5000);\nawait driver.findElement(By.xpath('/html/body/main/section/div/div[2]/div[1]/div/div[2]/ul/li[7]')).click()\n{\n  const elements = await driver.findElements(By.xpath('//*[@id=\"navbarSupportedContent\"]/div[1]/a[1]'))\n  assert(elements.length)\n}\n// await driver.sleep(2000)",
               "err": {},
-              "uuid": "7859619a-a3a2-436c-81eb-da6bffa6a93b",
-              "parentUUID": "68fe0e92-8207-41d4-a1ba-4ebe99ce4d09",
+              "uuid": "d711ff99-db36-4ef0-a972-9ab1a6b600e6",
+              "parentUUID": "f8ae2910-2848-49b0-9543-2e44c1ceaccb",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "7859619a-a3a2-436c-81eb-da6bffa6a93b"
+            "d711ff99-db36-4ef0-a972-9ab1a6b600e6"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 10367,
+          "duration": 8668,
           "root": false,
           "rootEmpty": false,
           "_timeout": 30000
