@@ -40,7 +40,7 @@ describe('check', function() {
     await driver.wait(until.elementLocated(By.linkText("Delete")), 5000);
     await driver.findElement(By.linkText("Delete")).click()
     
-    driver.navigate().refresh();
+    // driver.navigate().refresh();
     await driver.wait(until.elementLocated(By.id('w4')), 5000)
     {
       const elements = await driver.findElements(By.id("w4"))
