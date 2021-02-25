@@ -3,7 +3,8 @@ const { Builder, By, Key, until } = require('selenium-webdriver')
 const assert = require('assert')
 
 describe('check', function() {
-  this.timeout(30000)
+  this.timeout(60000)
+  /**@type {import('selenium-webdriver').ThenableWebDriver} */
   let driver
   let vars
   beforeEach(async function() {
@@ -31,26 +32,35 @@ describe('check', function() {
     await driver.wait(until.elementLocated(By.css("#w0 > li:nth-child(1) > a")), 5000);
     
     await driver.findElement(By.css("#w0 > li:nth-child(1) > a")).click()
-
     // await driver.executeScript(`document.querySelector("a[data-href='/en/jobs/autotestjobcreation/delete']").scrollIntoView()`);
+    // await driver.wait(until.elementLocated(By.xpath("(//button[@type=\'button\'])[3]")), 5000);
     await driver.findElement(By.css(".btn-soft-danger")).click()
 
-    await driver.wait(until.elementLocated(By.id("job-confirm-delete_autotestjobcreation")), 5000);
-    // await driver.wait(until.elementLocated(By.linkText("Delete")), 5000);
-    // await driver.executeScript(`document.querySelector("a[href='/en/jobs/autotestjobcreation/delete']").scrollIntoView()`);
-    await driver.findElement(By.css(".modal-footer > .btn-primary")).click()
+    // await driver.sleep(5000)
+    await driver.wait(until.elementLocated(By.linkText("Delete")), 5000);
+    await driver.findElement(By.linkText("Delete")).click()
     
-    {
-      const elements = await driver.findElements(By.linkText("Auto_Test_Job_Creation"))
-      assert(!elements.length)
-    }
-    {
-      const elements = await driver.findElements(By.xpath("//p[contains(.,\'​Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, error voluptates tempore veritatis voluptatibus minima qui ipsa doloribus laboriosam obcaecati corporis officiis magni, eius temporibus incidunt quisquam labore, sunt recusandae.\')]"))
-      assert(!elements.length)
-    }
+    driver.navigate().refresh();
+    await driver.wait(until.elementLocated(By.id('w4')), 5000)
     {
       const elements = await driver.findElements(By.id("w4"))
       assert(elements.length)
+    }
+
+    await driver.findElement(By.linkText("Account")).click()
+    await driver.findElement(By.linkText("My Jobs")).click()
+
+    await driver.wait(until.elementLocated(By.css("#w0 > li:nth-child(1) > a")), 5000);
+    
+    await driver.findElement(By.css("#w0 > li:nth-child(1) > a")).click()
+    {
+      const elements = await driver.findElements(By.linkText("Auto_Test_Job_Creation"))
+      console.log('kek:', elements);
+      assert(elements.length === 0)
+    }
+    {
+      const elements = await driver.findElements(By.xpath("//p[contains(.,\'​Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, error voluptates tempore veritatis voluptatibus minima qui ipsa doloribus laboriosam obcaecati corporis officiis magni, eius temporibus incidunt quisquam labore, sunt recusandae.\')]"))
+      assert(elements.length === 0)
     }
   })
 })
