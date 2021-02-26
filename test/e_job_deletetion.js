@@ -14,7 +14,7 @@ describe('check', function() {
   afterEach(async function() {
     await driver.quit();
   })
-  it('check', async function() {
+  it('job_creation_incorrect', async function() {
     await driver.get("https://dev.incognitohr.com/en")
     await driver.manage().window().setRect({ width: 1920, height: 1080})
     await driver.findElement(By.linkText("Sign in")).click()
@@ -46,6 +46,7 @@ describe('check', function() {
       const elements = await driver.findElements(By.id("w4"))
       assert(elements.length)
     }
+    await driver.sleep(2000)
 
     await driver.findElement(By.linkText("Account")).click()
     await driver.findElement(By.linkText("My Jobs")).click()
@@ -62,5 +63,6 @@ describe('check', function() {
       const elements = await driver.findElements(By.xpath("//p[contains(.,\'​Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, error voluptates tempore veritatis voluptatibus minima qui ipsa doloribus laboriosam obcaecati corporis officiis magni, eius temporibus incidunt quisquam labore, sunt recusandae.\')]"))
       assert(elements.length === 0)
     }
+    await driver.sleep(2000)
   })
 })

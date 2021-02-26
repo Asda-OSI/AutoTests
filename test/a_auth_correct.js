@@ -13,7 +13,7 @@ describe('sign in', function() {
   afterEach(async function() {
     await driver.quit();
   })
-  it('sign in', async function() {
+  it('auth_correct', async function() {
     await driver.get("https://dev.incognitohr.com/en")
     await driver.manage().window().setRect({ width: 1920, height: 1080})
     await driver.findElement(By.linkText("Sign in")).click()
@@ -31,6 +31,6 @@ describe('sign in', function() {
       const elements = await driver.findElements(By.xpath('//*[@id="navbarSupportedContent"]/div[1]/a[1]'))
       assert(elements.length)
     }
-    // await driver.sleep(2000)
+    await driver.sleep(2000)
   })
 })

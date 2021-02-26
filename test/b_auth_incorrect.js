@@ -14,7 +14,7 @@ describe('auth', function() {
   afterEach(async function() {
     await driver.quit();
   })
-  it('auth', async function() {
+  it('auth_incorrect', async function() {
     console.log(driver.prototype)
     await driver.get("https://dev.incognitohr.com/en")
     await driver.manage().window().setRect({ width: 1920, height: 1080})
@@ -30,5 +30,6 @@ describe('auth', function() {
       const elements = await driver.findElements(By.css(".alert"))
       assert(elements.length)
     }
+    await driver.sleep(2000)
   })
 })

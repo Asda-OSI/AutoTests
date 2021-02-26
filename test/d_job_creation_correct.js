@@ -2,7 +2,7 @@
 const { Builder, By, Key, until } = require('selenium-webdriver')
 const assert = require('assert')
 
-describe('Job_creating', function() {
+describe('Job_creation_correct', function() {
   this.timeout(100000)
   /**@type {import('selenium-webdriver').ThenableWebDriver} */
   let driver
@@ -14,7 +14,7 @@ describe('Job_creating', function() {
   afterEach(async function() {
     await driver.quit();
   })
-  it('Job_creating', async function() {
+  it('Job_creation_correct', async function() {
     await driver.get("https://dev.incognitohr.com/en")
     await driver.manage().window().setRect({width: 1920, height: 1080})
     await driver.findElement(By.linkText("Sign in")).click()
@@ -124,5 +124,6 @@ describe('Job_creating', function() {
     }
 
     await driver.findElement(By.linkText("Logout")).click()
+    await driver.sleep(2000)
   })
 })
