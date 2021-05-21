@@ -3,7 +3,7 @@ const { Builder, By, Key, until } = require('selenium-webdriver')
 const assert = require('assert')
 const formatURL = require('../lib/formatUrl')
 
-describe('auth', function() {
+describe('authorization_incorrect', function() {
   this.timeout(30000)
   let driver
   let vars
@@ -14,9 +14,9 @@ describe('auth', function() {
   afterEach(async function() {
     await driver.quit();
   })
-  it('auth_incorrect', async function() {
+  it('authorization_incorrect', async function() {
     console.log(driver.prototype)
-    await driver.get("https://dev.incognitohr.com/en")
+    await driver.get("https://incognitohr.com/en")
     await driver.manage().window().setRect({ width: 1920, height: 1080})
     await driver.findElement(By.linkText("Sign in")).click()
     await driver.findElement(By.id("loginform-identity")).click()

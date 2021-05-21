@@ -15,11 +15,11 @@ describe('Job_creation_correct', function() {
     await driver.quit();
   })
   it('Job_creation_correct', async function() {
-    await driver.get("https://dev.incognitohr.com/en")
+    await driver.get("https://incognitohr.com/en")
     await driver.manage().window().setRect({width: 1920, height: 1080})
     await driver.findElement(By.linkText("Sign in")).click()
     await driver.findElement(By.id("loginform-identity")).click()
-    await driver.findElement(By.id("loginform-identity")).sendKeys("artur@osi.in.ua")
+    await driver.findElement(By.id("loginform-identity")).sendKeys("testmail.ecosmart@gmail.com")
     await driver.findElement(By.id("loginform-password")).click()
     await driver.findElement(By.id("loginform-password")).sendKeys(Key.SPACE, Key.SPACE, Key.SPACE, Key.SPACE, Key.SPACE, '1')
     await driver.findElement(By.name("login-button")).click()
@@ -94,7 +94,7 @@ describe('Job_creation_correct', function() {
 
     await driver.wait(until.elementLocated(By.css(".btn-wide")), 5000);
 
-    await driver.findElement(By.xpath('//*[@id="w4"]/div/div/div[16]/button')).click()
+    await driver.findElement(By.xpath('//*[@id="job-form"]/div/div/div[16]/button')).click()
     {
       await driver.wait(until.elementLocated(By.xpath("//h1[contains(.,\'Auto_Test_Job_Creation\')]")), 5000);
       const elements = await driver.findElements(By.xpath("//h1[contains(.,\'Auto_Test_Job_Creation\')]"))

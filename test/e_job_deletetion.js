@@ -2,7 +2,7 @@
 const { Builder, By, Key, until } = require('selenium-webdriver')
 const assert = require('assert')
 
-describe('check', function() {
+describe('job_creation_incorrect', function() {
   this.timeout(60000)
   /**@type {import('selenium-webdriver').ThenableWebDriver} */
   let driver
@@ -15,11 +15,11 @@ describe('check', function() {
     await driver.quit();
   })
   it('job_creation_incorrect', async function() {
-    await driver.get("https://dev.incognitohr.com/en")
+    await driver.get("https://incognitohr.com/en")
     await driver.manage().window().setRect({ width: 1920, height: 1080})
     await driver.findElement(By.linkText("Sign in")).click()
     await driver.findElement(By.id("loginform-identity")).click()
-    await driver.findElement(By.id("loginform-identity")).sendKeys("artur@osi.in.ua")
+    await driver.findElement(By.id("loginform-identity")).sendKeys("testmail.ecosmart@gmail.com")
     await driver.findElement(By.id("loginform-password")).click()
     await driver.findElement(By.id("loginform-password")).sendKeys(Key.SPACE, Key.SPACE, Key.SPACE, Key.SPACE, Key.SPACE, '1')
     await driver.findElement(By.name("login-button")).click()

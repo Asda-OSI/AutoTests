@@ -2,7 +2,7 @@
 const { Builder, By, until, Key } = require('selenium-webdriver')
 const assert = require('assert')
 
-describe('sign in', function() {
+describe('authorization_correct', function() {
   this.timeout(30000)
   let driver
   let vars
@@ -13,8 +13,8 @@ describe('sign in', function() {
   afterEach(async function() {
     await driver.quit();
   })
-  it('auth_correct', async function() {
-    await driver.get("https://dev.incognitohr.com/en")
+  it('authorization_correct', async function() {
+    await driver.get("https://incognitohr.com/en")
     await driver.manage().window().setRect({ width: 1920, height: 1080})
     await driver.findElement(By.linkText("Sign in")).click()
     await driver.findElement(By.id("loginform-identity")).click()
@@ -22,11 +22,12 @@ describe('sign in', function() {
     await driver.findElement(By.id("loginform-password")).click()
     await driver.findElement(By.id("loginform-password")).sendKeys(Key.SPACE, Key.SPACE, Key.SPACE, Key.SPACE, Key.SPACE, '1')
     await driver.findElement(By.name("login-button")).click()
-    // await driver.sleep(2000)
-    await driver.wait(until.elementLocated(By.xpath('/html/body/div[1]/header/nav/div/div[2]/a')), 5000);
-    await driver.findElement(By.xpath('/html/body/div[1]/header/nav/div/div[2]/a')).click()
-    await driver.wait(until.elementLocated(By.xpath('/html/body/main/section/div/div[2]/div[1]/div/div[2]/ul/li[7]')), 5000);
-    await driver.findElement(By.xpath('/html/body/main/section/div/div[2]/div[1]/div/div[2]/ul/li[7]')).click()
+    await driver.sleep(2000)
+    await driver.executeScript(`document.querySelector("a[href='/en/user/sign-in/logout']").scrollIntoView()`);
+    await driver.sleep(2000)
+
+    await driver.findElement(By.linkText("Logout")).click()
+
     {
       const elements = await driver.findElements(By.xpath('//*[@id="navbarSupportedContent"]/div[1]/a[1]'))
       assert(elements.length)
